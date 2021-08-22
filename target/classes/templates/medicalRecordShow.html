@@ -2,37 +2,72 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
 
-    <title>Spring Boot Exemple</title>
+<title>Medical Record Details -Show</title>
 
-    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
-<div class="container">
-    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+	<div class="container">
+		<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
 
-    <h2>Medical Record Details</h2>
-        <div>
-            <form class="form-horizontal">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Medical Record Id:</label>
-                    <div class="col-sm-10">
-                        <p class="form-control-static" th:text="${medicalRecord.id}">Medical Record Id</p></div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">First Name:</label>
-                    <div class="col-sm-10">
-                        <p class="form-control-static" th:text="${medicalRecord.firstName}">Fist Name</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Last Name:</label>
-                    <div class="col-sm-10">
-                        <p class="form-control-static" th:text="${medicalRecord.lastName}">Last Name</p>
-                    </div>
-                </div>
-            </form>
-    </div>
-</div>
+		<h2>Medical Record Details</h2>
+		<div>
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Medical Record Id:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${medicalRecord.id}">Medical
+							Record Id</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">First Name:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static"
+							th:text="${medicalRecord.firstName}">Fist Name</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Last Name:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${medicalRecord.lastName}">Last
+							Name</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Gender:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${medicalRecord.gender}">Gender</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Age:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${medicalRecord.age}">Fist
+							Name</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">City:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${medicalRecord.city}">City</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Country:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${medicalRecord.country}">Country</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Living With Diabetes:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${medicalRecord.livingWithDiabetes}">Living With Diabetes</p>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 
 </body>
 </html>

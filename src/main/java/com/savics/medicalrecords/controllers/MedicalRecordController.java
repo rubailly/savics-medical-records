@@ -1,6 +1,8 @@
 package com.savics.medicalrecords.controllers;
 
 import com.savics.medicalrecords.entities.MedicalRecord;
+import com.savics.medicalrecords.entities.MedicalRecord.Gender;
+import com.savics.medicalrecords.entities.MedicalRecord.LivingWithDiabetes;
 import com.savics.medicalrecords.services.MedicalRecordService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,6 +66,8 @@ public class MedicalRecordController {
     @RequestMapping("medicalRecord/new")
     public String newmedicalRecord(Model model) {
         model.addAttribute("medicalRecord", new MedicalRecord());
+        model.addAttribute("genderValues", Gender.values());
+        model.addAttribute("livingWithDiabetesValues", LivingWithDiabetes.values());
         return "medicalRecordForm";
     }
 
@@ -88,7 +92,7 @@ public class MedicalRecordController {
     @RequestMapping("medicalRecord/delete/{id}")
     public String deleteMedicalRecord(@PathVariable Integer id) {
         medicalRecordService.deleteMedicalRecord(id);
-        return "redirect:/medicalRecord";
+        return "redirect:/medicalRecords";
     }
 
 }
