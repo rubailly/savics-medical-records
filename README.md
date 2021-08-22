@@ -15,14 +15,23 @@ This project is based on the [Spring Boot](http://projects.spring.io/spring-boot
 The project is created with Maven, so you just need to import it to your IDE and build the project to resolve the dependencies
 
 ## Database configuration 
-Create a MySQL database with the name `savicsmrs` and add the credentials to `/resources/application.properties`.  
-The default ones are :
+
+The application is configured to use H2 Database Engine.
+H2 is an open-source lightweight Java database. It can be embedded in Java applications or run in the client-server mode. Mainly, H2 database can be configured to run as in-memory database, which means that data will not persist on the disk.
+See configurations in `/resources/application.properties`.  
+
+Preview :
 
 ```
-spring.datasource.url=jdbc:mysql://localhost:3306/savicsmrs
-spring.datasource.username=root
-spring.datasource.password=
-spring.jpa.hibernate.ddl-auto=update
+spring.h2.console.enabled=true
+# default path: h2-console
+spring.h2.console.path=/h2-ui
+ 
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver 
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto= update
 ```
 
 ## Usage 
