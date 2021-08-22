@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: Savics Medical Records Web Application
+Implementation-Version: 0.0.2-SNAPSHOT
+Built-By: rbailly
+Implementation-Vendor-Id: com.savics
+Build-Jdk: 1.8.0_292
+Implementation-URL: http://projects.spring.io/spring-boot/medical-reco
+ rds-web/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
