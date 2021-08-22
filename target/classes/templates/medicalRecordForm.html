@@ -2,36 +2,71 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
 
-    <title>Savics Medical Records</title>
+<title>Savics Medical Records</title>
 
-    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
-<div class="container">
-    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+	<div class="container">
+		<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
 
-    <h2>Medical Record Details</h2>
-    <div>
-        <form class="form-horizontal" th:object="${medicalRecord}" th:action="@{/medicalRecord}" method="post">
-            <input type="hidden" th:field="*{id}"/>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">First Name:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{firstName}"/>
-                </div>
-            </div>
-                        <div class="form-group">
-                <label class="col-sm-2 control-label">Last Name:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{lastName}"/>
-                </div>
-            </div>
-            <div class="row">
-                <button type="submit" class="btn btn-default">Submit</button>
-            </div>
-        </form>
-    </div>
-</div>
+		<h2>Medical Record Details</h2>
+		<div>
+			<form class="form-horizontal" th:object="${medicalRecord}"
+				th:action="@{/medicalRecord}" method="post">
+				<input type="hidden" th:field="*{id}" />
+				<div class="form-group">
+					<label class="col-sm-2 control-label">First Name:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" th:field="*{firstName}" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Last Name:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" th:field="*{lastName}" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Gender:</label> <select
+						name="gender">
+						<option
+							th:each="genderOption : ${T(com.savics.medicalrecords.entities.MedicalRecord.Gender).values()}"
+							th:value="${genderOption}" th:text="${genderOption}"></option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Age:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" th:field="*{age}" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">City:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" th:field="*{city}" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Country:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" th:field="*{country}" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Living With Diabetes:</label> <select
+						name="livingWithDiabetes">
+						<option
+							th:each="livingWithDiabetesOption : ${T(com.savics.medicalrecords.entities.MedicalRecord.LivingWithDiabetes).values()}"
+							th:value="${livingWithDiabetesOption}" th:text="${livingWithDiabetesOption}"></option>
+					</select>
+				</div>
+				<div class="row">
+					<button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
 
 </body>
 </html>

@@ -27,11 +27,11 @@
                 <td th:text="${medicalRecord.id}"><a href="/medicalRecord/${medicalRecord.id}">Id</a></td>
                 <td th:text="${medicalRecord.firstName}">First Name</td>
                 <td th:text="${medicalRecord.lastName}">Last Name</td>
-                <td th:text="${medicalRecord.firstName}">Gender</td>
-                <td th:text="${medicalRecord.lastName}">Age</td>
-                <td th:text="${medicalRecord.firstName}">City</td>
-                <td th:text="${medicalRecord.lastName}">Country</td>
-                <td th:text="${medicalRecord.lastName}">Living With Diabetes</td>
+                <td th:text="${medicalRecord.gender}">Gender</td>
+                <td th:text="${medicalRecord.age}">Age</td>
+                <td th:text="${medicalRecord.city}">City</td>
+                <td th:text="${medicalRecord.country}">Country</td>
+                <td th:text="${medicalRecord.livingWithDiabetes}">Living With Diabetes</td>
                 <td><a th:href="${ '/medicalRecord/' + medicalRecord.id}">View</a><br/>
                 <a th:href="${'/medicalRecord/edit/' + medicalRecord.id}">Edit</a><br/>
                 <a th:href="${'/medicalRecord/delete/' + medicalRecord.id}">Delete</a></td>
