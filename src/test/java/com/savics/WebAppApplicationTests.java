@@ -1,4 +1,4 @@
-package com.ensat;
+package com.savics;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
